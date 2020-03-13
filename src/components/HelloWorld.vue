@@ -49,7 +49,7 @@ export default class HelloWorld extends Vue {
     return id + (a || '')
   }
 
-  clickText = '点击打印 +1:';
+  clickText = '点击打印+1: ';
   num = 0;
 
   handleClick(): void {
