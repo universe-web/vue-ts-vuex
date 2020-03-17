@@ -4,7 +4,7 @@ import store from '@/store';
 @Module({ name: 'a', dynamic: true, namespaced: true, store })
 export default class A extends VuexModule {
   name = 'moduleA'
-  data: object | never = {
+  data: object | void = {
     id: 1001
   }
 
@@ -13,7 +13,7 @@ export default class A extends VuexModule {
     this.name = name
   }
   @Mutation
-  changeData(data: object | never) {
+  changeData(data: object | void) {
     this.data = {
       ...this.data,
       ...data
