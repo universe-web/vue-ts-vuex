@@ -29,8 +29,8 @@ export default class A extends VuexModule {
   @Action
   asyncChangeData () {
     setTimeout(() => {
-      this.changeData({ a: 'sss'})
-      this.asyncChangeName()
+      this.changeData({ a: 'sss'})    // 调 Mutation 改变 state
+      this.asyncChangeName()          // 调 Action
     }, 200)
   }
 

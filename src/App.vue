@@ -1,11 +1,12 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+  div#app
+    div#nav
+      router-link(to="/") Home 
+      span | 
+      router-link(to="/about") About 
+      span | 
+      router-link(to="/moment") Moment
+    router-view
 </template>
 
 <style>

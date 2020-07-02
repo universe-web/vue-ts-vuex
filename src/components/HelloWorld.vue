@@ -26,12 +26,12 @@
     <p>{{ moduleName }}</p>
     <p @click="changeModuleData">{{ moduleData }}</p>
 
-    <RedText text='dda' />
+    <RedText :text='redtext' />
   </div>
 </template>
 
 <script lang="ts">
-import RedText from '@/ui/redText.vue';
+import RedText from '@/ui/RedText.vue';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { ModuleA } from '@/store/a';
 
@@ -51,6 +51,7 @@ export default class HelloWorld extends Vue {
 
   clickText = '点击打印+1: ';
   num = 0;
+  redtext = 'dda'
 
   handleClick(): void {
     this.num++
@@ -58,7 +59,6 @@ export default class HelloWorld extends Vue {
 
   changeModuleData(): void {
     // this.$store.commit('changeName', 'moduleA alert')
-    // ModuleA.asyncChangeName()
     ModuleA.asyncChangeData()
   }
 }
